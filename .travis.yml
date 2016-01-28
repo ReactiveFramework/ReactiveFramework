@@ -16,7 +16,7 @@ before_install:
 before_script:
     - mkdir build
     - cd build
-    - cmake ..
+    - cmake .. -DCMAKE_BUILD_TYPE=DEBUG
 script: make && make test
 after_success:
     - make coverage
