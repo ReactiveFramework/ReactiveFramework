@@ -1,0 +1,20 @@
+/**
+ * Reactive
+ *
+ * (c) 2015-2016 Axel Etcheverry
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+#pragma once
+
+#define REACTIVE_NAME           "Reactive"
+#define REACTIVE_VERSION        "@REACTIVE_VERSION_MAJOR@.@REACTIVE_VERSION_MINOR@.@REACTIVE_VERSION_PATCH@"
+#define REACTIVE_VERSION_MAJOR  "@REACTIVE_VERSION_MAJOR@"
+#define REACTIVE_VERSION_MINOR  "@REACTIVE_VERSION_MINOR@"
+#define REACTIVE_VERSION_PATCH  "@REACTIVE_VERSION_PATCH@"
+#define REACTIVE_AUTHOR         "Axel Etcheverry"
+#define SYSTEM                  "@SYSTEM@"
+#define SYSTEM_NAME             "@SYSTEM_NAME@"
+#define SYSTEM_PROCESSOR        "@SYSTEM_PROCESSOR@"
+#define SIZEOF_DATA_PTR         "@SIZEOF_DATA_PTR@"
