@@ -92,7 +92,7 @@ link_directories (/opt/local/lib)
 
 include_directories (${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-find_package (Boost 1.59.0 REQUIRED COMPONENTS thread system iostreams regex date_time signals filesystem) #  COMPONENTS date_time filesystem system ...
+find_package (Boost 1.54.0 REQUIRED COMPONENTS thread system iostreams regex date_time signals filesystem) #  COMPONENTS date_time filesystem system ...
 
 include_directories (${Boost_INCLUDE_DIRS})
 
