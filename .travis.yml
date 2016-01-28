@@ -10,7 +10,7 @@ before_install:
     - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
     - sudo apt-get -qq update
     - sudo apt-get -qq install build-essential
-    - sudo pip install --user cpp-coveralls
+    - pip install --user cpp-coveralls
     - sudo apt-get -qq install valgrind curl libicu-dev libhttp-parser-dev openssl libboost-all-dev
     - $CXX --version
 before_script:

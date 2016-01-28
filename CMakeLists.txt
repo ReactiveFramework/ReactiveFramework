@@ -140,6 +140,12 @@ add_executable (
 
 target_link_libraries (reactive-test ReactiveShared pthread)
 
+if (CMAKE_COMPILER_IS_GNUCXX)
+    include (CodeCoverage)
+    setup_target_for_coverage (reactive-coverage reactive-test coverage)
+    target_link_libraries (reactive-test gcov)
+endif ()
+
 function (add_memcheck_test name binary)
     set (memcheck_command "${CMAKE_MEMORYCHECK_COMMAND} ${CMAKE_MEMORYCHECK_COMMAND_OPTIONS}")
     separate_arguments (memcheck_command)
