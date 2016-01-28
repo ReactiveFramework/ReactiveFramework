@@ -1,7 +1,7 @@
 Reactive Framework
 ==================
 
-![Reactive logo](https://raw.githubusercontent.com/ReactiveFramework/ReactiveFramework/master/_resources/logo.png "Reactive logo")
+![Reactive logo](_resources/logo.png?raw=true "Reactive logo")
 
 | Branch  | Status |
 |---------|--------|
