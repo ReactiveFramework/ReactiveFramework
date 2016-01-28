@@ -79,7 +79,7 @@ endif ()
 set (CXX_FLAGS_EXTRA "-std=c++11")
 
 set (CMAKE_CXX_FLAGS         "$ENV{CPPFLAGS} -Wall")
-set (CMAKE_CXX_FLAGS_DEBUG   "-g -ggdb -O0 -fno-inline -Wextra -Wno-unused-parameter -DDEBUG ${CXX_FLAGS_EXTRA}")
+set (CMAKE_CXX_FLAGS_DEBUG   "-g -ggdb -O0 -fprofile-arcs -ftest-coverage -fno-inline -Wextra -Wno-unused-parameter -DDEBUG ${CXX_FLAGS_EXTRA}")
 set (CMAKE_CXX_FLAGS_RELEASE "-O3 -fomit-frame-pointer ${CXX_FLAGS_EXTRA}")
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")

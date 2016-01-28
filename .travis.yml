@@ -16,10 +16,10 @@ before_install:
 before_script:
     - mkdir build
     - cd build
-    - cmake .. -DCMAKE_BUILD_TYPE=DEBUG
+    - cmake .. -DCMAKE_BUILD_TYPE=Debug
 script: make && make test
 after_success:
-    - make coverage
+    - make reactive-coverage
     - coveralls --exclude lib --exclude tests --gcov-options '\-lp'
 branches:
     only:
