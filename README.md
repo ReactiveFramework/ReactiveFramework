@@ -3,10 +3,10 @@ Reactive Framework
 
 ![Reactive logo](_resources/logo.png?raw=true "Reactive logo")
 
-| Branch  | Status |
-|---------|--------|
-| master  | [![Build Status](https://travis-ci.org/ReactiveFramework/ReactiveFramework.svg?branch=master)](https://travis-ci.org/ReactiveFramework/ReactiveFramework) |
-| develop | [![Build Status](https://travis-ci.org/ReactiveFramework/ReactiveFramework.svg?branch=develop)](https://travis-ci.org/ReactiveFramework/ReactiveFramework) |
+| Branch  | Status | Coverage |
+|---------|--------|----------|
+| master  | [![Build Status](https://travis-ci.org/ReactiveFramework/ReactiveFramework.svg?branch=master)](https://travis-ci.org/ReactiveFramework/ReactiveFramework) | [![Coverage Status](https://coveralls.io/repos/github/ReactiveFramework/ReactiveFramework/badge.svg?branch=master)](https://coveralls.io/github/ReactiveFramework/ReactiveFramework?branch=master) |
+| develop | [![Build Status](https://travis-ci.org/ReactiveFramework/ReactiveFramework.svg?branch=develop)](https://travis-ci.org/ReactiveFramework/ReactiveFramework) | [![Coverage Status](https://coveralls.io/repos/github/ReactiveFramework/ReactiveFramework/badge.svg?branch=develop)](https://coveralls.io/github/ReactiveFramework/ReactiveFramework?branch=develop) |
 
 
 Reactive is a C++11 asynchronous http server framework.
