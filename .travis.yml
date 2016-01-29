@@ -19,7 +19,6 @@ before_script:
     - cmake .. -DCMAKE_BUILD_TYPE=Debug
 script: make && make test
 after_success:
-    - make reactive-coverage
     - coveralls --exclude lib --exclude test --gcov-options '\-lp'
 branches:
     only:
