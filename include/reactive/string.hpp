@@ -36,21 +36,17 @@ namespace reactive {
             std::size_t match_index = 0, pos = 0;
 
             //--- Scanning the rest of the string
-            while (match_index != std::string::npos)
-            {
+            while (match_index != std::string::npos) {
                 // If content_ is empty or delimiter is not present in the content string
                 // Then match_index will be at npos
                 match_index = content_.find(delimiter_, pos);
 
                 // Extracting the string from the last position 'pos' to the found
                 // length (match_index-pos)
-                if (match_index != std::string::npos)
-                {
+                if (match_index != std::string::npos) {
                     parts_.push_back(content_.substr(pos, match_index-pos));
                     pos = match_index + delimiter_.size();
-                }
-                else
-                {
+                } else {
                     parts_.push_back(content_.substr(pos));
                 }
             }
