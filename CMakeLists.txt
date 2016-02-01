@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 2.6)
 
-project (Reactive CXX)
+project (Reactive)
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     set (CMAKE_CXX_COMPILER "clang++")
