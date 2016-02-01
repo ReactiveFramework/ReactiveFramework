@@ -102,6 +102,9 @@ include_directories (${HTTP_PARSER_INCLUDE_DIRS})
 find_package(Crypto REQUIRED)
 include_directories (${CRYPTO_INCLUDE_DIR})
 
+find_package(LibUV REQUIRED)
+include_directories (${LIBUV_INCLUDE_DIRS})
+
 # find cpp files
 #file (GLOB_RECURSE SRCFILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/src/ *.cpp)
 
@@ -119,11 +122,11 @@ file (
 
 add_library (ReactiveShared SHARED ${SRC_FILES})
 set_target_properties (ReactiveShared PROPERTIES XCODE_ATTRIBUTE_DEBUG_INFORMATION_FORMAT "dwarf-with-dsym" OUTPUT_NAME reactive)
-target_link_libraries (ReactiveShared ${Boost_LIBRARIES} pthread ${HTTP_PARSER_LIBRARIES} ${CRYPTO_LIBRARIES})
+target_link_libraries (ReactiveShared ${Boost_LIBRARIES} pthread ${HTTP_PARSER_LIBRARIES} ${CRYPTO_LIBRARIES} ${LIBUV_LIBRARIES})
 
 add_library (ReactiveStatic STATIC ${SRC_FILES})
 set_target_properties (ReactiveStatic PROPERTIES XCODE_ATTRIBUTE_DEBUG_INFORMATION_FORMAT "dwarf-with-dsym" OUTPUT_NAME reactive)
-target_link_libraries (ReactiveStatic ${Boost_LIBRARIES} pthread ${HTTP_PARSER_LIBRARIES} ${CRYPTO_LIBRARIES})
+target_link_libraries (ReactiveStatic ${Boost_LIBRARIES} pthread ${HTTP_PARSER_LIBRARIES} ${CRYPTO_LIBRARIES} ${LIBUV_LIBRARIES})
 
 enable_testing ()
 
@@ -145,6 +148,8 @@ if (CMAKE_COMPILER_IS_GNUCXX)
     setup_target_for_coverage (reactive-coverage reactive-test coverage)
     target_link_libraries (reactive-test gcov)
 endif ()
+
+add_subdirectory (demo)
 
 function (add_memcheck_test name binary)
     set (memcheck_command "${CMAKE_MEMORYCHECK_COMMAND} ${CMAKE_MEMORYCHECK_COMMAND_OPTIONS}")

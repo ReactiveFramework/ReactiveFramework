@@ -17,9 +17,9 @@ before_script:
     - mkdir build
     - cd build
     - cmake .. -DCMAKE_BUILD_TYPE=Debug
-script: make && make test
+script: make -j2 && make test
 after_success:
-    - coveralls --exclude lib --exclude test --gcov-options '\-lp'
+    - coveralls --exclude test --gcov-options '\-lp'
 branches:
     only:
         - master
