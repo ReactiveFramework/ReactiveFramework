@@ -11,8 +11,12 @@ before_install:
     - sudo apt-get -qq update
     - sudo apt-get -qq install build-essential
     - pip install --user cpp-coveralls
-    - sudo apt-get -qq install valgrind curl libicu-dev libhttp-parser-dev openssl libboost-all-dev lcov libuv-dev
+    - sudo apt-get -qq install valgrind curl libicu-dev libhttp-parser-dev openssl libboost-all-dev lcov
     - $CXX --version
+    - wget -q -O libuv-v1.8.0.tar.gz http://dist.libuv.org/dist/v1.8.0/libuv-v1.8.0.tar.gz
+    - tar -xzf libuv-v1.8.0.tar.gz
+    - cd libuv-v1.8.0/
+    - sh autogen.sh && ./configure && make --quiet && sudo make install --quiet
 before_script:
     - mkdir build
     - cd build
