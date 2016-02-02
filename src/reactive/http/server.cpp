@@ -156,7 +156,7 @@ namespace http {
         if (m_loop != NULL) {
             uv_walk(m_loop, onCloseWalk, NULL);
             uv_run(m_loop, UV_RUN_DEFAULT);
-            uv_loop_delete(m_loop);
+            //uv_loop_delete(m_loop);
             m_loop = NULL;
         }
     }
