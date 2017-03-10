@@ -207,8 +207,15 @@ Dependencies
 * curl
 * icu
 
+Gentoo:
 ~~~shell
 emerge -av dev-libs/boost dev-libs/icu dev-libs/libuv net-libs/http-parser net-misc/curl dev-libs/crypto++ dev-util/scons
+~~~
+
+MacOS:
+
+~~~shell
+brew install boost http-parser cryptopp icu4c libuv
 ~~~
 
 Build

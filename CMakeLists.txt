@@ -88,6 +88,12 @@ else ()
     include_directories ("${PROJECT_BINARY_DIR}")
 endif ()
 
+if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin") 
+    message (STATUS "Homebrew")
+    include_directories ("${PROJECT_BINARY_DIR}" "/usr/local/opt/openssl/include")
+    link_directories(/usr/local/opt/openssl/lib)
+endif ()
+
 link_directories (/opt/local/lib)
 
 include_directories (${CMAKE_CURRENT_SOURCE_DIR}/include)

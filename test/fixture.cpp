@@ -66,8 +66,8 @@ public:
 
         m_thread.detach();
 
-        std::chrono::milliseconds duration(1000);
-        std::this_thread::sleep_for(duration);
+        std::chrono::milliseconds duration1(1000);
+        std::this_thread::sleep_for(duration1);
 
         delete m_server;
         delete m_app;
